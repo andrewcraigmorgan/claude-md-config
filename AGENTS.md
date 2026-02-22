@@ -66,14 +66,21 @@ Add to `~/.mcp.json`:
 
 ## Custom Skills
 
-Install these skills to `~/.claude/skills/`:
+Reusable workflow instructions for AI assistants. Located in the `skills/` directory of this repo.
 
-| Skill | Directory | Purpose |
-| ----- | --------- | ------- |
-| Bitbucket Helpers | `~/.claude/skills/bitbucket-helpers/` | PR creation with default reviewers, merge with branch cleanup |
-| Zoho Task | `~/.claude/skills/zoho-task/` | Task workflow automation based on status |
+| Skill | Purpose |
+| ----- | ------- |
+| `bitbucket-helpers` | PR creation with default reviewers, merge with branch cleanup |
+| `zoho-task` | Task workflow automation based on Zoho task status |
 
-Skills source: [ai-coding-standards/skills/](https://github.com/andrewcraigmorgan/ai-coding-standards/tree/main/skills)
+### Installation
+
+**Claude Code:** Copy to `~/.claude/skills/`
+```bash
+cp -r skills/* ~/.claude/skills/
+```
+
+**Other AI assistants:** Reference the skill markdown files directly or include in context.
 
 ## Bitbucket
 

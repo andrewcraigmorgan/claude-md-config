@@ -27,12 +27,14 @@ The standards reference these MCP servers. Add to `~/.mcp.json`:
 
 ## Custom Skills
 
-Located in `skills/` directory:
+Reusable workflow instructions located in `skills/` directory. These work with any AI assistant.
 
 | Skill | Purpose |
 | ----- | ------- |
 | `bitbucket-helpers` | PR creation with default reviewers, merge with branch cleanup |
 | `zoho-task` | Task workflow automation based on Zoho task status |
+
+For Claude Code, copy to `~/.claude/skills/`. For other assistants, reference the markdown files directly.
 
 ## What's Included
 
