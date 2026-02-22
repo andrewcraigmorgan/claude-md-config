@@ -42,7 +42,6 @@ cp CLAUDE.md ~/.claude/CLAUDE.md
 ### Backend Standards
 - **Database conventions** - Migration naming, column conventions, soft deletes
 - **API standards** - REST response format, HTTP status codes, versioning
-- **Client handoff** - Documentation requirements for project completion
 
 ## Customization
 
