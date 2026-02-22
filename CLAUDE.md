@@ -314,13 +314,6 @@ ROBOTS_NOINDEX=true
 
 ## Third-Party Integrations
 
-### CMS Integration (WordPress/Strapi/Sanity)
-
-- **Headless preferred** - Use as content API, not for rendering
-- **Typed responses** - Generate TypeScript types from CMS schema
-- **Preview mode** - Implement draft preview for content editors
-- **Webhooks** - Set up cache invalidation on content publish
-
 ### Payment Integration
 
 - **Never log card data** - PCI compliance
