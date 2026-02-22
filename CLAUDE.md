@@ -425,6 +425,16 @@ Examples:
 - **Logs/Analytics** - Hard delete after retention period
 - **Transactional data** - Never delete, use status flags
 
+### Right to Be Forgotten (GDPR Article 17)
+
+All systems must implement a hard delete capability for user data upon request:
+
+- **User data purge** - Implement a method to permanently erase all personal data
+- **Cascade deletion** - Remove user data from all related tables and backups
+- **Anonymization alternative** - Where deletion breaks referential integrity, anonymize instead (replace PII with hashed/random values)
+- **Audit trail** - Log that a deletion request was fulfilled (without logging deleted data)
+- **Third-party notification** - Notify integrated services to delete user data
+
 ## API Standards
 
 ### REST Response Format
