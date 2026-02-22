@@ -2,19 +2,37 @@
 
 Coding standards and guidelines for AI coding assistants (Claude Code, Cursor, Copilot, etc).
 
-## Installation
-
-### Claude Code
-
-Symlink `AGENTS.md` to your Claude config directory:
+## Quick Setup
 
 ```bash
-ln -s /path/to/ai-coding-standards/AGENTS.md ~/.claude/CLAUDE.md
+# Clone this repo
+git clone https://github.com/andrewcraigmorgan/ai-coding-standards.git ~/ai-coding-standards
+
+# For Claude Code: symlink the standards file
+ln -sf ~/ai-coding-standards/AGENTS.md ~/.claude/CLAUDE.md
+
+# Install custom skills
+mkdir -p ~/.claude/skills
+cp -r ~/ai-coding-standards/skills/* ~/.claude/skills/
 ```
 
-### Other AI Assistants
+## MCP Servers
 
-Reference `AGENTS.md` in your project root or include it in your assistant's context.
+The standards reference these MCP servers. Add to `~/.mcp.json`:
+
+| MCP Server | Package | Purpose |
+| ---------- | ------- | ------- |
+| Bitbucket | `@aashari/mcp-server-atlassian-bitbucket` | PR management, repo operations |
+| Zoho Projects | [zoho-projects-mcp](https://github.com/andrewcraigmorgan/zoho-projects-mcp) | Task and project management |
+
+## Custom Skills
+
+Located in `skills/` directory:
+
+| Skill | Purpose |
+| ----- | ------- |
+| `bitbucket-helpers` | PR creation with default reviewers, merge with branch cleanup |
+| `zoho-task` | Task workflow automation based on Zoho task status |
 
 ## What's Included
 
@@ -47,7 +65,10 @@ Reference `AGENTS.md` in your project root or include it in your assistant's con
 
 ### Backend Standards
 - **Database conventions** - Migration naming, column conventions, soft deletes
-- **API standards** - REST response format, versioning
+
+## For Other AI Assistants
+
+Reference `AGENTS.md` in your project root or include it in your assistant's context.
 
 ## Customization
 

@@ -4,6 +4,77 @@
 - Never include copyright notices or attribution claiming AI wrote the code
 - All code written belongs to the user
 
+## AI Setup Assistant
+
+**When a user clones this repo or references these standards, proactively check if required services are configured:**
+
+1. **Check for MCP servers**: If Bitbucket or Zoho tools are needed but not available, guide the user through setup
+2. **Check for skills**: If skills are referenced but not installed, offer to copy them to `~/.claude/skills/`
+3. **Check for symlinks**: If using Claude Code, offer to symlink AGENTS.md to `~/.claude/CLAUDE.md`
+
+### Quick Setup Commands
+
+```bash
+# Clone this repo
+git clone https://github.com/andrewcraigmorgan/ai-coding-standards.git ~/ai-coding-standards
+
+# Symlink for Claude Code
+ln -sf ~/ai-coding-standards/AGENTS.md ~/.claude/CLAUDE.md
+
+# Install skills
+cp -r ~/ai-coding-standards/skills/* ~/.claude/skills/
+```
+
+## Required MCP Servers
+
+Install these MCP servers for full functionality:
+
+| MCP Server | Package/Repository | Purpose |
+| ---------- | ------------------ | ------- |
+| Bitbucket | `@aashari/mcp-server-atlassian-bitbucket` | PR management, repo operations |
+| Zoho Projects | [zoho-projects-mcp](https://github.com/andrewcraigmorgan/zoho-projects-mcp) | Task and project management |
+
+### Installation
+
+Add to `~/.mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "bitbucket": {
+      "command": "npx",
+      "args": ["-y", "@aashari/mcp-server-atlassian-bitbucket"],
+      "env": {
+        "ATLASSIAN_USER_EMAIL": "your-email@example.com",
+        "ATLASSIAN_API_TOKEN": "your-api-token"
+      }
+    },
+    "zoho-projects": {
+      "command": "node",
+      "args": ["/path/to/zoho-projects-mcp/dist/index.js"],
+      "env": {
+        "ZOHO_CLIENT_ID": "your-client-id",
+        "ZOHO_CLIENT_SECRET": "your-client-secret",
+        "ZOHO_REFRESH_TOKEN": "your-refresh-token",
+        "ZOHO_PORTAL_ID": "your-portal-id",
+        "ZOHO_API_DOMAIN": "https://projectsapi.zoho.com"
+      }
+    }
+  }
+}
+```
+
+## Custom Skills
+
+Install these skills to `~/.claude/skills/`:
+
+| Skill | Directory | Purpose |
+| ----- | --------- | ------- |
+| Bitbucket Helpers | `~/.claude/skills/bitbucket-helpers/` | PR creation with default reviewers, merge with branch cleanup |
+| Zoho Task | `~/.claude/skills/zoho-task/` | Task workflow automation based on status |
+
+Skills source: [ai-coding-standards/skills/](https://github.com/andrewcraigmorgan/ai-coding-standards/tree/main/skills)
+
 ## Bitbucket
 
 Use the Bitbucket MCP tools (`mcp__bitbucket__bb_*`) for all Bitbucket operations.
