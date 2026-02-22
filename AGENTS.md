@@ -1,8 +1,18 @@
 # Global Instructions
 
+**Standards Version: 1.0.0**
+
 - Never add AI/agent as a contributor in any files (package.json, README, etc.)
 - Never include copyright notices or attribution claiming AI wrote the code
 - All code written belongs to the user
+
+## Version Check
+
+When asked "what version of coding standards are you using?" or similar:
+
+1. Report the version shown above (Standards Version: X.X.X)
+2. Check if updates are available: `git -C ~/ai-coding-standards fetch && git -C ~/ai-coding-standards log HEAD..origin/main --oneline`
+3. If updates exist, offer to pull: `git -C ~/ai-coding-standards pull`
 
 ## AI Setup Assistant
 

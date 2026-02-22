@@ -1,5 +1,7 @@
 # AI Coding Standards
 
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
 Coding standards and guidelines for AI coding assistants (Claude Code, Cursor, Copilot, etc).
 
 ## Quick Setup
