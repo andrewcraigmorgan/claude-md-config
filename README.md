@@ -1,23 +1,30 @@
-# Claude Code Configuration
+# AI Coding Standards
 
-My machine-level CLAUDE.md configuration for [Claude Code](https://claude.ai/code).
+Coding standards and guidelines for AI coding assistants (Claude Code, Cursor, Copilot, etc).
 
 ## Installation
 
-Copy `CLAUDE.md` to your Claude config directory:
+### Claude Code
+
+Symlink `AGENTS.md` to your Claude config directory:
 
 ```bash
-cp CLAUDE.md ~/.claude/CLAUDE.md
+ln -s /path/to/ai-coding-standards/AGENTS.md ~/.claude/CLAUDE.md
 ```
+
+### Other AI Assistants
+
+Reference `AGENTS.md` in your project root or include it in your assistant's context.
 
 ## What's Included
 
 ### Core Standards
-- **Attribution rules** - Prevents Claude from adding itself as a contributor
+- **Attribution rules** - Prevents AI from adding itself as a contributor
 - **Bitbucket workflow** - PR creation and merging standards
 - **Git standards** - Branch naming and commit message conventions
 - **Coding standards** - TypeScript/JavaScript linting rules and style guide
 - **Security standards** - Best practices for secure code
+- **GDPR compliance** - Data protection, consent, user rights
 - **Performance standards** - Guidelines for efficient code
 
 ### Framework Standards
@@ -34,15 +41,14 @@ cp CLAUDE.md ~/.claude/CLAUDE.md
 
 ### Quality & Process
 - **Environment management** - Local → Staging → Production workflow
-- **Third-party integrations** - CMS, payments, analytics patterns
 - **Code review checklist** - Self-review and reviewer guidelines
 - **Testing standards** - Unit, integration, E2E requirements
 - **Browser support matrix** - Supported browsers and breakpoints
 
 ### Backend Standards
 - **Database conventions** - Migration naming, column conventions, soft deletes
-- **API standards** - REST response format, HTTP status codes, versioning
+- **API standards** - REST response format, versioning
 
 ## Customization
 
-Edit the `CLAUDE.md` file to match your team's standards and workflows.
+Edit `AGENTS.md` to match your team's standards and workflows.
