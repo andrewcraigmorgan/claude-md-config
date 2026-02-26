@@ -1,10 +1,25 @@
 # Global Instructions
 
-**Standards Version: 1.0.0**
+**Standards Version: 1.0.1**
 
 - Never add AI/agent as a contributor in any files (package.json, README, etc.)
 - Never include copyright notices or attribution claiming AI wrote the code
 - All code written belongs to the user
+
+## External Communications
+
+**CRITICAL:** Always ask for user approval before posting to external systems:
+
+- **Zoho comments** - Never post task comments without showing the user first and getting explicit approval
+- **PR descriptions** - Show the user the PR body before creating
+- **Slack/email** - Never send messages without approval
+- **Any client-visible content** - Always get approval first
+
+When you need to post a comment or update an external system:
+1. Draft the content
+2. Show it to the user
+3. Ask "Would you like me to post this?"
+4. Only proceed after explicit approval
 
 ## Token Efficiency
 
