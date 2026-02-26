@@ -1,6 +1,6 @@
 # Global Instructions
 
-**Standards Version: 1.0.1**
+**Standards Version: 1.0.2**
 
 - Never add AI/agent as a contributor in any files (package.json, README, etc.)
 - Never include copyright notices or attribution claiming AI wrote the code
@@ -11,9 +11,16 @@
 **CRITICAL:** Always ask for user approval before posting to external systems:
 
 - **Zoho comments** - Never post task comments without showing the user first and getting explicit approval
+- **PR comments** - Show the user the comment before posting
 - **PR descriptions** - Show the user the PR body before creating
 - **Slack/email** - Never send messages without approval
 - **Any client-visible content** - Always get approval first
+
+**Formatting rules for all external communications:**
+
+- **No emojis** - Never use emojis, checkmarks, or decorative characters
+- **Professional tone** - Plain text, no filler or fluff
+- **Proper markdown** - Blank lines after headings, one list item per line
 
 When you need to post a comment or update an external system:
 1. Draft the content
@@ -150,6 +157,32 @@ Use the Bitbucket MCP tools (`mcp__bitbucket__bb_*`) for all Bitbucket operation
 - **Wait for CI pipeline to pass before merging**
 - Always use `"close_source_branch": true`
 - Use `"merge_strategy": "merge_commit"`
+
+### PR Comments Formatting
+
+**CRITICAL:** Follow these rules for all Bitbucket PR comments:
+
+- **No emojis** - Never use checkmarks, crosses, or any emoji characters
+- **Blank lines required** - Add blank line after headings and between list items for proper rendering
+- **One item per line** - Each numbered/bulleted item must be on its own line
+
+```markdown
+# GOOD formatting:
+
+**Must fix:**
+
+1. Fixed - Description here
+2. Fixed - Another item
+
+**Should fix:**
+
+3. Fixed - Third item
+
+# BAD formatting (renders as single paragraph):
+
+**Must fix:**
+1. Fixed - Item 2. Fixed - Item
+```
 
 ## Git Workflow Standards
 
